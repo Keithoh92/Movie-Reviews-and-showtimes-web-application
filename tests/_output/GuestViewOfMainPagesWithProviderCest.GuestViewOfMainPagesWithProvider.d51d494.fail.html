@@ -1,0 +1,345 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Search Results</title>
+</head>
+<body class="container-fluid bg-light">
+
+<header>
+
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <ul class="navbar-nav nav-pills">
+        <div class="btn-toolbar mx-2">
+            <li class="nav-item active">
+                <a href="/index.php?action=movies" class="nav-link mr-1">Movies</a>
+            </li>
+        </div>
+        <div class="btn-toolbar mx-2">
+            <li class="nav-item">
+                <a href="/index.php?action=reviews" class="nav-link mr-1">Reviews</a>
+            </li>
+        </div>
+        <div class="btn-toolbar mx-2">
+            <li class="nav-item">
+                <a href="/index.php?action=admin" class="nav-link mr-1">Admin</a>
+            </li>
+        </div>
+    <span class="navbar-text text-success">Welcome: <strong>admin</strong></span>
+        <div class="btn-toolbar mx-2">
+            <li class="nav-item">
+                <a href="/index.php?action=logout" class="nav-link mr-1">
+                     Logout</a>
+            </li>
+        </div>
+    </ul>
+</nav>
+<main class="mb-5">
+    <div class="container-fluid">
+        <div class="page-header"><div class="mx-auto" style="width: 600px;">
+    <h1>Movie Search Results</h1>
+</div>
+<form class="form-inline">
+    <div class="form-group">
+        <div class="form-group mx-2">
+            <label for="location" class="font-weight-bold">Location</label>
+        </div>
+        <select class="form-control" name="location" id="location">
+            <option value="">All</option>
+                            <option value="Dublin">Dublin</option>
+                            <option value="Dublin">Dublin</option>
+                            <option value="Dublin">Dublin</option>
+                            <option value="Dublin">Dublin</option>
+                            <option value="Dublin">Dublin</option>
+                            <option value="Dublin">Dublin</option>
+                            <option value="Dublin">Dublin</option>
+                            <option value="Dublin">Dublin</option>
+                            <option value="Dublin">Dublin</option>
+                            <option value="Dublin">Dublin</option>
+                    </select>
+        <div class="form-group mx-2">
+            <label for="cinema" class="font-weight-bold">Cinema</label>
+        </div>
+        <select class="form-control" name="cinema" id="cinema">
+            <option value="">All</option>
+                            <option value="1">ODEAN Blanchardstown</option>
+                            <option value="2">ODEAN Coolock</option>
+                            <option value="3">ODEAN Stillorgan</option>
+                            <option value="4">ODEAN Charlestown</option>
+                            <option value="5">ODEAN Point Square</option>
+                            <option value="6">Cineworld Dublin</option>
+                            <option value="7">Vue Liffey Valley</option>
+                            <option value="8">Lighthouse Cinema</option>
+                            <option value="9">Movies at Dundrum</option>
+                            <option value="10">Movies at Swords</option>
+                    </select>
+        <div class="form-group mx-2">
+            <label for="movie" class="font-weight-bold">Movie</label>
+        </div>
+        <select class="form-control" name="movie" id="movie">
+            <option value="">All</option>
+                            <option value="1">Alien</option>
+                            <option value="2">Alien2</option>
+                            <option value="3">Jaws</option>
+                            <option value="4">Jaws2</option>
+                            <option value="5">Shrek</option>
+                            <option value="6">Shrek2</option>
+                            <option value="7">Toy Story</option>
+                            <option value="8">Heat</option>
+                            <option value="9">Once Upon a time in the West</option>
+                            <option value="10">Saw</option>
+                    </select>
+        <div class="btn-toolbar mx-2">
+            <input class="btn btn-info" type="submit" name="action" value="Search Movies">
+        </div>
+        <div class="btn-toolbar mx-2">
+            <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Advanced Search</button>
+        </div>
+    </div>
+<!--------------------- advanced search  -------------------------->
+    <span class="collapse" id="collapseExample">
+        <span class="form-group">
+
+            <div class="form-group mx-2">
+                <label for="genre" class="font-weight-bold">Genre</label>
+            </div>
+            <select class="form-control" name="genre" id="genre">
+                <option value="">All</option>
+                                    <option value="Sci-Fi">Sci-Fi</option>
+                                    <option value="Sci-Fi">Sci-Fi</option>
+                                    <option value="Thriller">Thriller</option>
+                                    <option value="Thriller">Thriller</option>
+                                    <option value="Animation">Animation</option>
+                                    <option value="Animation">Animation</option>
+                                    <option value="Animation">Animation</option>
+                                    <option value="Thriller">Thriller</option>
+                                    <option value="Western">Western</option>
+                                    <option value="Horror">Horror</option>
+                            </select>
+            <div class="form-group mx-2">
+                <label for="rating" class="font-weight-bold">Rating</label>
+            </div>
+            <select class="form-control" name="rating" id="rating">
+                <option value="">All</option>
+                <option value="1">1 star</option>
+                <option value="2">2 stars</option>
+                <option value="3">3 stars</option>
+                <option value="4">4 stars</option>
+                <option value="5">5 stars</option>
+            </select>
+            <div class="form-group mx-2">
+                <label for="startTime" class="font-weight-bold">Start Time</label>
+            </div>
+            <select class="form-control" name="startTime" id="startTime">
+                <option value="">All</option>
+                <option value="12">12-1pm</option>
+                <option value="13">1-2pm</option>
+                <option value="14">2-3pm</option>
+                <option value="15">3-4pm</option>
+                <option value="16">4-5pm</option>
+                <option value="17">5-6pm</option>
+                <option value="18">6-7pm</option>
+                <option value="19">7-8pm</option>
+                <option value="20">8-9pm</option>
+                <option value="21">9-10pm</option>
+                <option value="22">10-11pm</option>
+            </select>
+         </span>
+    </span>
+</form>
+<p>
+</p>
+
+
+
+<table class="table table-striped table-dark">
+        <tr class="text-warning">
+            <th> Location </th>
+            <th> Movie </th>
+            <th> Cinema </th>
+            <th> Genre </th>
+            <th> Rating </th>
+            <th> Date </th>
+            <th> Time </th>
+        </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Alien </td>
+        <td> ODEAN Blanchardstown </td>
+        <td> Sci-Fi </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-03-25 </td>
+        <td> 13:10:11 </td>
+    </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Alien2 </td>
+        <td> ODEAN Coolock </td>
+        <td> Sci-Fi </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-03-25 </td>
+        <td> 14:10:11 </td>
+    </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Jaws </td>
+        <td> ODEAN Stillorgan </td>
+        <td> Thriller </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-03-25 </td>
+        <td> 15:10:11 </td>
+    </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Jaws2 </td>
+        <td> ODEAN Charlestown </td>
+        <td> Thriller </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-03-25 </td>
+        <td> 16:10:11 </td>
+    </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Shrek </td>
+        <td> ODEAN Point Square </td>
+        <td> Animation </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-03-25 </td>
+        <td> 17:10:11 </td>
+    </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Shrek2 </td>
+        <td> Cineworld Dublin </td>
+        <td> Animation </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-03-25 </td>
+        <td> 18:10:11 </td>
+    </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Toy Story </td>
+        <td> Vue Liffey Valley </td>
+        <td> Animation </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-03-25 </td>
+        <td> 19:10:11 </td>
+    </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Heat </td>
+        <td> Lighthouse Cinema </td>
+        <td> Thriller </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-03-25 </td>
+        <td> 20:10:11 </td>
+    </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Once Upon a time in the West </td>
+        <td> Movies at Dundrum </td>
+        <td> Western </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-03-25 </td>
+        <td> 21:10:11 </td>
+    </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Saw </td>
+        <td> Movies at Swords </td>
+        <td> Horror </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-03-25 </td>
+        <td> 22:10:11 </td>
+    </tr>
+    <tr>
+        <td> Dublin </td>
+        <td> Toy Story </td>
+        <td> Vue Liffey Valley </td>
+        <td> Animation </td>
+        <td class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                    </td>
+        <td> 2019-04-28 </td>
+        <td> 20:30:00 </td>
+    </tr>
+    </table>
+        </div>
+    </div>
+</main>
+
+<footer class="fixed-bottom text-light bg-dark">
+    <div class="container">
+        <p class="text-center">
+    2019 &copy; Colm Doggett & Keith O'Hare
+        </p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
