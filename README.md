@@ -1,5 +1,5 @@
 # Movie-Reviews-and-showtimes-web-application
-2 team memebrs (My role=Fullstack)
+2 team members (My role=Fullstack)
 
 Description: Website to find showtimes of movies in Dublin and reviews of movies that are currently on show
 
